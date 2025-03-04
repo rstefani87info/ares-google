@@ -19,5 +19,8 @@
   "dependencies": {
     "@ares/core": "git+https://github.com/rstefani87info/ares-core.git#master",
     "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@ares/files": "git+https://github.com/rstefani87info/ares-files.git#master"
   }
 } 
