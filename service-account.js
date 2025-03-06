@@ -1,7 +1,17 @@
 /** 
 * @author Roberto Stefani 
 **/ 
- 
+import {decrypt} from '@ares/core/security.js';
+
+const k59870WWW = getMD5Hash('k59870WWW');
+export function getGoogleServiceAccountKey(absKeyFilePath, password) {
+  const file = JSON.parse(getFileContent(absKeyFilePath));
+  if(!file) return null;
+  if(file["@aReS-encrypted"])return file;
+  const decryptedFile = decrypt(file, `${password}${k59870WWW}`);
+  return new ServiceAccount(decryptedFile);
+}
+
 export class ServiceAccount {
   constructor( aReS, type,
     project_id,

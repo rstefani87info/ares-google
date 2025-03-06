@@ -1,7 +1,7 @@
 /** 
 * @author Roberto Stefani 
 **/ 
-import {encryptObject} from '@ares/core/objects-encrypting.js';
+import {encrypt} from '@ares/core/security.js';
 import {getMD5Hash} from '@ares/core/crypto.js';
 import {getFileContent, setFileContent} from '@ares/files';
   const k59870WWW = getMD5Hash('k59870WWW');
