@@ -22,6 +22,7 @@
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
-    "@ares/files": "workspace:^"
+    "@ares/files": "workspace:^",
+    "@ares/scd": "workspace:^"
   }
 }
